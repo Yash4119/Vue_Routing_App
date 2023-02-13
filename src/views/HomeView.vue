@@ -59,7 +59,7 @@ const handleChange = ()=>{
 
 <style scoped>
 .container{
-  background-color: rgb(195, 229, 143);
+  background-color: rgb(228, 247, 200);
 }
 .cards {
   display: flex;
