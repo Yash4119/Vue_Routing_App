@@ -1,8 +1,5 @@
 <script setup>
 import {RouterView, RouterLink} from "vue-router"
-import {ref} from "vue"
-
-const counter = ref(0);
 
 </script>
 
@@ -11,10 +8,7 @@ const counter = ref(0);
     <div class="links">
       <RouterLink active-class="active" to="/">Home</RouterLink>
       <RouterLink active-class="active" to="/about">About</RouterLink>
-      <!-- <div>
-        {{ counter }}
-      </div>
-      <button @click="counter++">Click</button> -->
+      
     </div>
     <RouterView />
   </main>

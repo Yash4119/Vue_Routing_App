@@ -2,6 +2,7 @@
 import { useRoute, RouterView, useRouter } from 'vue-router';
 import { ref, onBeforeMount } from 'vue';
 import cars from "../data.json"
+// import {clicks} from "./Autos.vue"
 
 const car = ref(null)
 const router = useRouter()
@@ -13,11 +14,17 @@ console.log(route.params)
 onBeforeMount(() => {
     car.value = cars.find(c => c.id === parseInt(id))
 })
+// import { ref } from 'vue';
+const clicks = ref(null)
 
 </script>
 
 <template>
     <main class="container">
+        <div class="temp">
+            <button @click="clicks+=1">Click me</button>
+            <div>clicks :- {{ clicks }}</div>
+        </div>
         <h1>The Car</h1>
         <div v-if="car">
             <h2>{{ car.name }}</h2>
@@ -35,6 +42,10 @@ onBeforeMount(() => {
 </template>
 
 <style scoped>
+
+.temp{
+    background-color: aqua;
+}
 
 .container{
     margin: auto;

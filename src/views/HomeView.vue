@@ -2,8 +2,9 @@
 import { useRouter,useRoute } from "vue-router";
 import carsData from "../data.json"
 import { ref,watch,onMounted } from "vue";
+import Autos from "./Autos.vue";
 
-const router = useRouter();
+const router = useRouter(); 
 const route = useRoute();
 
 const make = ref("")
@@ -30,7 +31,7 @@ const handleChange = ()=>{
 
 <template>
   <main class="container">
-
+    <Autos/>
     <h1>Ours Cars Collection</h1>
     <select @change="handleChange" v-model="make">
       <option value="All" selected>All</option>
@@ -57,6 +58,9 @@ const handleChange = ()=>{
 <!-- 3. Define where to Render the Page Components -->
 
 <style scoped>
+.container{
+  background-color: rgb(195, 229, 143);
+}
 .cards {
   display: flex;
   width: 1000px;
